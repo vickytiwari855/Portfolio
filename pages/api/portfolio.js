@@ -3,7 +3,7 @@ const portfolio = [
     id: 0,
     projectName: "SMART LEARNING DESTINATION",
     url: "https://smartlearningdestination.com/",
-    image: "projects/sld.png",
+    image: "projects/SLD-Web.png",
     projectDetail:
       "Restructure your business with JMM ERP’s all-in-one cloud-based ERP. JMM ERP provides a robust, cost-effective online solution with state-of-the-art software to increase business value and enhance customer impact.",
     technologiesUsed: [
