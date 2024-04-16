@@ -3,8 +3,8 @@ import {
   FaDownload,
   FaFacebook,
   FaGithub,
+  FaInstagram,
   FaLinkedin,
-  FaTwitter,
 } from "react-icons/fa";
 import Contact from "./Contact";
 import Download from "./Download";
@@ -14,7 +14,7 @@ import Tools from "./Tools";
 import Skills from "./Skills";
 import Image from "next/image";
 import { NAME, DESIGNATION, SOCIAL_LINKS } from "../../../constants/constants";
-import profileImage from "../../../public/images/profile.png";
+import profileImage from "../../../public/images/PR-Profile.png";
 
 const Intro = () => {
   return (
@@ -58,12 +58,22 @@ const Intro = () => {
         >
           <FaGithub />
         </Link>
-        {/* <Link href={SOCIAL_LINKS.TWITTER} target='_blank' rel='noreferrer' className=''>
-          <FaTwitter />
-        </Link> */}
-        {/* <Link href={SOCIAL_LINKS.FACEBOOK} target='_blank' rel='noreferrer' className=''>
+        <Link
+          href={SOCIAL_LINKS.INSTAGRAM}
+          target="_blank"
+          rel="noreferrer"
+          className=""
+        >
+          <FaInstagram />
+        </Link>
+        <Link
+          href={SOCIAL_LINKS.FACEBOOK}
+          target="_blank"
+          rel="noreferrer"
+          className=""
+        >
           <FaFacebook />
-        </Link> */}
+        </Link>
         <Link
           href={SOCIAL_LINKS.LINKEDIN}
           target="_blank"

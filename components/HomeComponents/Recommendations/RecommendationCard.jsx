@@ -12,9 +12,7 @@ const RecommendationCard = ({ data }) => {
           alt="a"
         />
         <div className=" text-Snow underline italic">
-          <a href={data?.linkednURL} target="_blank" rel="noreferrer">
-            {data?.name}
-          </a>
+          <p>{data?.name}</p>
         </div>
         <div className="text-xs text-LightGray italic mt-1">
           {data?.designation}

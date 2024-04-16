@@ -10,11 +10,11 @@ const Footer = () => {
           <div className="mr-1 text-base">
             <AiFillCopyrightCircle />
           </div>
-          <span>2023 All Rights Reserved.</span>
+          <span>2024 All Rights Reserved.</span>
         </div>
         <div className="flex items-center">
           <a
-            href="https://www.fiverr.com/codeworthy"
+            href="https://www.linkedin.com/in/vikas-tiwari-03a94a1a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
             target="_blank"
             rel="noreferrer"
           >

@@ -55,7 +55,9 @@ export const CONTACTS = {
 
 export const SOCIAL_LINKS = {
   GITHUB: "/",
-  LINKEDIN: "/",
-  TWITTER: "/",
-  FACEBOOK: "/",
+  LINKEDIN:
+    "https://www.linkedin.com/in/vikas-tiwari-03a94a1a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  INSTAGRAM:
+    "https://www.instagram.com/vicky_cittu_tiwari?igsh=MXM1cDBmZGN1Njl1Mg%3D%3D&utm_source=qr",
+  FACEBOOK: "https://www.facebook.com/share/hdZBNDf8UELDBLAh/?mibextid=LQQJ4d",
 };

@@ -1,12 +1,12 @@
 import { useState } from "react";
 import BannerLayout from "../components/Common/BannerLayout";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { SiUpwork } from "react-icons/si";
+import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { HiMail, HiUser } from "react-icons/hi";
 import { BsChatTextFill } from "react-icons/bs";
-import Fiverr_Icon from "../components/Fiverr_Icon";
 import Footer from "../components/Footer";
 import { Modal } from "antd";
+import naukriIcon from "../public/images/naukri.png";
+import Image from "next/image";
 
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,23 +52,23 @@ const Contact = () => {
         <div className="h-16 w-full card_stylings text-xl sm:text-3xl flex gap-x-8 sm:gap-x-16 items-center justify-center text-Snow">
           <a
             className="hover:scale-125 ease-in-out duration-700"
-            href=""
+            href={`mailto:vickytiwari855@gmail.com`}
             target="_blank"
             rel="noreferrer"
           >
             <HiMail />
           </a>
-          <a
+          {/* <a
             className="hover:scale-125 ease-in-out duration-700"
             href="/"
             target="_blank"
             rel="noreferrer"
           >
             <FaGithub />
-          </a>
+          </a> */}
           <a
             className="hover:scale-125 ease-in-out duration-700"
-            href="/"
+            href="https://www.linkedin.com/in/vikas-tiwari-03a94a1a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
             target="_blank"
             rel="noreferrer"
           >
@@ -76,19 +76,27 @@ const Contact = () => {
           </a>
           <a
             className="hover:scale-125 ease-in-out duration-700 hidden sm:block"
-            href="/"
+            href="https://www.facebook.com/share/hdZBNDf8UELDBLAh/?mibextid=LQQJ4d"
             target="_blank"
             rel="noreferrer"
           >
-            <Fiverr_Icon />
+            <FaFacebook />
           </a>
           <a
             className="hover:scale-125 ease-in-out duration-700 text-2xl sm:text-4xl mt-1"
-            href="#"
+            href="https://www.instagram.com/vicky_cittu_tiwari?igsh=MXM1cDBmZGN1Njl1Mg%3D%3D&utm_source=qr"
             target="_blank"
             rel="noreferrer"
           >
-            <SiUpwork />
+            <FaInstagram />
+          </a>
+          <a
+            className="hover:scale-125 ease-in-out duration-700 text-2xl sm:text-4xl mt-1"
+            href="https://www.naukri.com/mnjuser/profile?id=&altresid"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image className="w-9 h-9 " src={naukriIcon} alt="Naukri.com" />
           </a>
         </div>
 
