@@ -3,11 +3,26 @@ const background = [
     eduCards: [
       {
         id: 0,
-        title: "BU Bhopal",
-        degree: "Bachelor of Computer Applications",
+        title: "Industrial Training Institute (ITI) ",
+        degree: "Electrical Machine Operator",
         detail:
-          "Bachelor's Degree in Computer System Engineering from BU Bhopal.",
+          "Industrial training institutes is a qualification and are post-secondary schools in India constituted under the Directorate General of Training.",
+        year: "2017-2019",
+      },
+      {
+        id: 1,
+        title: "Barkatullah University,Bhopal",
+        degree: "Bachelor of Computer Applications",
+        detail: "Bachelor's Degree in Computer System Engineering.",
         year: "2016-2019",
+      },
+      {
+        id: 2,
+        title: "Higher Secondary Education",
+        degree: "Senior Secondary Education.",
+        detail:
+          "Secondary education refers to the stage of formal education that follows primary education and precedes higher education.",
+        year: "2015-2016",
       },
     ],
   },

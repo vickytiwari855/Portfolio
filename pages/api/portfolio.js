@@ -1,49 +1,11 @@
 const portfolio = [
   {
-    id: 0,
-    projectName: "SMART LEARNING DESTINATION",
-    url: "https://smartlearningdestination.com/",
-    image: "projects/SLD-Web.png",
-    projectDetail:
-      "Restructure your business with JMM ERP’s all-in-one cloud-based ERP. JMM ERP provides a robust, cost-effective online solution with state-of-the-art software to increase business value and enhance customer impact.",
-    technologiesUsed: [
-      {
-        tech: "Next",
-      },
-      {
-        tech: "Typescript",
-      },
-      {
-        tech: "Boot Strap",
-      },
-    ],
-  },
-  {
-    id: 1,
-    projectName: "Ingram Micro",
-    url: "https://www.ingrammicro.com/",
-    image: "projects/IM-Ingrammicro.png",
-    projectDetail:
-      "Ingram Micro India, a large national distributor offers a comprehensive portfolio of technology and mobility distribution, 3PL Services, logistics, supply chain, professional services, financial solutions and capabilities, making us the one-stop shop for our partners. Our unparalleled product selection and availability includes recent investments in specialty offerings and solutions in cloud, mobility, enterprise computing, technology distribution, data center, IoT & more.      ",
-    technologiesUsed: [
-      {
-        tech: "React",
-      },
-      {
-        tech: "Typescript",
-      },
-      {
-        tech: "Material UI",
-      },
-    ],
-  },
-  {
     id: 2,
     projectName: "Zoom Room",
     url: "https://app.zoomroom.com/",
     image: "projects/ZR-Admin.png",
-    projectDetail:
-      "Invest in Saudi Arabia, Streamline Your Business Setup Process in Saudi Arabia with FirmSanad Simplify the process of obtaining licenses and starting a business in Saudi Arabia with our streamlined platform.",
+    projectDetail: `
+    I contributed to the Zoom Room project, a dog training platform that focuses on positive reinforcement. My role involved developing an admin panel for scheduling classes, managing products and services, and overseeing staff and clients. I used React, JavaScript, Material UI, and Syncfusion to create a user-friendly dashboard and scheduling calendar.`,
     technologiesUsed: [
       {
         tech: "React",
@@ -68,7 +30,7 @@ const portfolio = [
     url: "https://client.zoomroom.com/",
     image: "projects/ZR-Client.png",
     projectDetail:
-      "Fateh Al Mustaqbil is a one-of-a-kind travel agency designed to cater to the interests of travelers across the globe, founded in 2023 in Riyadh, Saudi Arabia. Their expertise lies in crafting exceptional journeys tailored to each client's unique requirements, whether it be ticketing, hotel bookings, or visa assistance.",
+      "I also contributed to the development of the client web application, an extension of the Zoom Room project. This platform allows users to log in as guests or with credentials to access schedules, book classes, and purchase products. It enhances the user experience by providing convenient access to essential features while maintaining simplicity and ease of use.",
     technologiesUsed: [
       {
         tech: "React",
@@ -89,8 +51,8 @@ const portfolio = [
     projectName: "Fox Pool",
     url: "/",
     image: "projects/FX-Foxpool.png",
-    projectDetail:
-      "Fox Pool Management is a family owned and operated business that provides swimming pool management services, including construction and repairs, in Southeastern PA, and Central NJ.  We offer the highest level of communication and customer service in the pool management industry.",
+    projectDetail: `
+    Created Foxpool, a user-friendly pool management system with modules for inspections, pool details, user management, and account recovery. Using React, JavaScript, Material UI, HTML, CSS, Node.js, Express, and MongoDB, I ensured smooth functionality. Notable features include easy-to-use interfaces for inspections and pool details, secure user authentication, and an admin panel for managing users. Integrating third-party tools improved the system. Foxpool is simple, secure, and efficient for managing pools.`,
     technologiesUsed: [
       {
         tech: "React",
@@ -99,10 +61,7 @@ const portfolio = [
         tech: "JavaScript",
       },
       {
-        tech: "REST API's",
-      },
-      {
-        tech: "Material UI",
+        tech: "Rest API's",
       },
       {
         tech: "Node",
@@ -110,27 +69,102 @@ const portfolio = [
       {
         tech: "Express",
       },
+      {
+        tech: "MongoDB",
+      },
+      {
+        tech: "Material UI",
+      },
+      {
+        tech: "HTML 5",
+      },
+      {
+        tech: "CSS 3",
+      },
     ],
   },
   {
-    id: 5,
-    projectName: "SLD Admin",
-    url: "/",
-    image: "projects/SLD-Admin.png",
-    projectDetail:
-      "Fox Pool Management is a family owned and operated business that provides swimming pool management services, including construction and repairs, in Southeastern PA, and Central NJ.  We offer the highest level of communication and customer service in the pool management industry.",
+    id: 0,
+    projectName: "SMART LEARNING DESTINATION",
+    url: "https://smartlearningdestination.com/",
+    image: "projects/SLD-Web.png",
+    projectDetail: `Built a fully functional e-commerce site using React and Redux. Overcame challenges such as integrating payment gateways. Implemented features such as a personalized shopping cart and dynamic product recommendations.
+    Implemented responsive design and cross-browser compatibility to ensure optimal user experience across devices.`,
     technologiesUsed: [
       {
-        tech: "React",
+        tech: "Next",
+      },
+      {
+        tech: "Redux",
       },
       {
         tech: "JavaScript",
       },
       {
-        tech: "REST API's",
+        tech: "Boot Strap",
+      },
+      {
+        tech: "HTML",
+      },
+      {
+        tech: "CSS",
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    projectName: "SLD Admin",
+    url: "/",
+    image: "projects/SLD-Admin.png",
+    projectDetail: `Developed an admin panel for an e-commerce website to manage products, orders, and customers. User authentication and authorization, product management, order tracking, customer management. Worked on integrating the site with third-party APIs, including payment gateways and shipping providers,
+     to improve the site's functionality and increase customer satisfaction. Created tables of all users, their details, and their roles for administrators to monitor all activities in the system.`,
+    technologiesUsed: [
+      {
+        tech: "Next",
+      },
+      {
+        tech: "Redux Toolkit",
+      },
+      {
+        tech: "JavaScript",
+      },
+      {
+        tech: "Rest API's",
+      },
+      {
+        tech: "BootStrap",
+      },
+      {
+        tech: "HTML 5",
+      },
+      {
+        tech: "CSS 3",
+      },
+    ],
+  },
+  {
+    id: 1,
+    projectName: "Ingram Micro",
+    url: "https://www.ingrammicro.com/",
+    image: "projects/IM-Ingrammicro.png",
+    projectDetail: `Developed a web-based employee management system to handle employee data, user roles. Created an admin panel that allows authorized administrators to invite and manage other users by assigning different levels of access permissions.
+    Designed the user interface with Material Ul, a component library for React, to provide an intuitive and responsive interface for different resolutions of desktop.`,
+    technologiesUsed: [
+      {
+        tech: "React",
+      },
+      {
+        tech: "Typescript",
       },
       {
         tech: "Material UI",
+      },
+      {
+        tech: "HTML 5",
+      },
+      {
+        tech: "CSS 3",
       },
     ],
   },
