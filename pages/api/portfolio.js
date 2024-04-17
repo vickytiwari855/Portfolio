@@ -1,5 +1,30 @@
 const portfolio = [
   {
+    id: 1,
+    projectName: "Ingram Micro",
+    url: "https://www.ingrammicro.com/",
+    image: "projects/IM-Ingrammicro.png",
+    projectDetail: `Developed a web-based employee management system to handle employee data, user roles. Created an admin panel that allows authorized administrators to invite and manage other users by assigning different levels of access permissions.
+    Designed the user interface with Material Ul, a component library for React, to provide an intuitive and responsive interface for different resolutions of desktop.`,
+    technologiesUsed: [
+      {
+        tech: "React",
+      },
+      {
+        tech: "Typescript",
+      },
+      {
+        tech: "Material UI",
+      },
+      {
+        tech: "HTML 5",
+      },
+      {
+        tech: "CSS 3",
+      },
+    ],
+  },
+  {
     id: 2,
     projectName: "Zoom Room",
     url: "https://app.zoomroom.com/",
@@ -30,7 +55,7 @@ const portfolio = [
     url: "https://client.zoomroom.com/",
     image: "projects/ZR-Client.png",
     projectDetail:
-      "I also contributed to the development of the client web application, an extension of the Zoom Room project. This platform allows users to log in as guests or with credentials to access schedules, book classes, and purchase products. It enhances the user experience by providing convenient access to essential features while maintaining simplicity and ease of use.",
+      "development of the Zoom Room Client Web, an extension of the Zoom Room project. This platform allows users to log in as guests or with credentials to access their dog's schedules, purchase products, and view their dog's details and achievements. Key features include a shopping cart for product purchases and a comprehensive view of dog schedules and achievements.",
     technologiesUsed: [
       {
         tech: "React",
@@ -43,43 +68,6 @@ const portfolio = [
       },
       {
         tech: "Material UI",
-      },
-    ],
-  },
-  {
-    id: 4,
-    projectName: "Fox Pool",
-    url: "/",
-    image: "projects/FX-Foxpool.png",
-    projectDetail: `
-    Created Foxpool, a user-friendly pool management system with modules for inspections, pool details, user management, and account recovery. Using React, JavaScript, Material UI, HTML, CSS, Node.js, Express, and MongoDB, I ensured smooth functionality. Notable features include easy-to-use interfaces for inspections and pool details, secure user authentication, and an admin panel for managing users. Integrating third-party tools improved the system. Foxpool is simple, secure, and efficient for managing pools.`,
-    technologiesUsed: [
-      {
-        tech: "React",
-      },
-      {
-        tech: "JavaScript",
-      },
-      {
-        tech: "Rest API's",
-      },
-      {
-        tech: "Node",
-      },
-      {
-        tech: "Express",
-      },
-      {
-        tech: "MongoDB",
-      },
-      {
-        tech: "Material UI",
-      },
-      {
-        tech: "HTML 5",
-      },
-      {
-        tech: "CSS 3",
       },
     ],
   },
@@ -111,7 +99,6 @@ const portfolio = [
       },
     ],
   },
-
   {
     id: 5,
     projectName: "SLD Admin",
@@ -125,6 +112,9 @@ const portfolio = [
       },
       {
         tech: "Redux Toolkit",
+      },
+      {
+        tech: "RTK Query",
       },
       {
         tech: "JavaScript",
@@ -143,19 +133,32 @@ const portfolio = [
       },
     ],
   },
+
   {
-    id: 1,
-    projectName: "Ingram Micro",
-    url: "https://www.ingrammicro.com/",
-    image: "projects/IM-Ingrammicro.png",
-    projectDetail: `Developed a web-based employee management system to handle employee data, user roles. Created an admin panel that allows authorized administrators to invite and manage other users by assigning different levels of access permissions.
-    Designed the user interface with Material Ul, a component library for React, to provide an intuitive and responsive interface for different resolutions of desktop.`,
+    id: 4,
+    projectName: "Fox Pool",
+    url: "/",
+    image: "projects/FX-Foxpool.png",
+    projectDetail: `
+      A user-friendly pool management system with modules for inspections, pool details, user management. Using React, JavaScript, Material UI, HTML, CSS, Node.js, Express, and MongoDB, I ensured smooth functionality. Notable features include easy-to-use interfaces for inspections and pool details, secure user authentication, and an admin panel for managing users. Foxpool is simple, secure, and efficient for managing pools.`,
     technologiesUsed: [
       {
         tech: "React",
       },
       {
-        tech: "Typescript",
+        tech: "JavaScript",
+      },
+      {
+        tech: "Rest API's",
+      },
+      {
+        tech: "Node",
+      },
+      {
+        tech: "Express",
+      },
+      {
+        tech: "MongoDB",
       },
       {
         tech: "Material UI",
