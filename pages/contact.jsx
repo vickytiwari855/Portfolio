@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BannerLayout from "../components/Common/BannerLayout";
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { HiMail, HiUser } from "react-icons/hi";
@@ -10,6 +10,30 @@ import Image from "next/image";
 
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+  const [formVal, setFormVal] = useState({
+    userName: "",
+    userEmail: "",
+    userMassage: "",
+  });
+
+  useEffect(() => {
+    const fetchAllData = async () => {
+      const response = await fetch("/api/getAllData");
+      if (response) {
+        const data = await response.json();
+      } else {
+        alert("Failed to fetch data!");
+      }
+    };
+    fetchAllData();
+  }, []);
+
+  function handleChange(e) {
+    const name = e.target.name;
+    const value = e.target.value;
+    setFormVal((prev) => ({ ...prev, [name]: value }));
+  }
 
   return (
     <BannerLayout>
@@ -58,14 +82,6 @@ const Contact = () => {
           >
             <HiMail />
           </a>
-          {/* <a
-            className="hover:scale-125 ease-in-out duration-700"
-            href="/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub />
-          </a> */}
           <a
             className="hover:scale-125 ease-in-out duration-700"
             href="https://www.linkedin.com/in/vikas-tiwari-03a94a1a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
@@ -101,7 +117,7 @@ const Contact = () => {
         </div>
 
         <div className="my-12 w-full h-auto text-Snow">
-          <h1 className="text-lg font-bold">Get In Touch</h1>
+          <h1 className="text-lg font-bold">Review</h1>
           <div className="mt-4 py-8 px-8 bg-EveningBlack rounded-xl text-sm">
             <div>
               <div className="flex flex-col w-full">
@@ -114,6 +130,10 @@ const Contact = () => {
                   </div>
                   <input
                     type="text"
+                    name="userName"
+                    value={formVal.userName}
+                    onChange={handleChange}
+                    required
                     className="input_stylings"
                     placeholder="Name"
                   />
@@ -129,6 +149,10 @@ const Contact = () => {
                     <HiMail />
                   </div>
                   <input
+                    name="userEmail"
+                    value={formVal.userEmail}
+                    onChange={handleChange}
+                    required
                     type="text"
                     className="input_stylings"
                     placeholder="Email"
@@ -147,14 +171,50 @@ const Contact = () => {
                   <textarea
                     rows={6}
                     cols={50}
+                    name="userMassage"
+                    value={formVal.userMassage}
+                    onChange={handleChange}
+                    required
                     className="input_stylings"
-                    placeholder="Message"
+                    placeholder="Review"
                   />
                 </div>
               </div>
 
               <div className="my-4">
-                <button onClick={() => setIsOpen(true)} className="button">
+                <button
+                  onClick={async () => {
+                    if (
+                      formVal.userEmail &&
+                      formVal.userMassage &&
+                      formVal.userName
+                    ) {
+                      const response = await fetch("/api/saveData", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(formVal),
+                      });
+
+                      if (response.ok) {
+                        setModalMessage("Thank you for your review!");
+                        setFormVal({
+                          userName: "",
+                          userEmail: "",
+                          userMassage: "",
+                        });
+                      } else {
+                        setModalMessage("Something went wrong!");
+                      }
+                    } else {
+                      setModalMessage("Please fill required fields!");
+                    }
+
+                    setIsOpen(true);
+                  }}
+                  className="button"
+                >
                   {" "}
                   SEND MESSAGE{" "}
                 </button>
@@ -175,7 +235,7 @@ const Contact = () => {
         onCancel={() => setIsOpen(false)}
       >
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-Green font-bold text-2xl">In Progress</h1>
+          <h1 className="text-Green font-bold text-2xl">{modalMessage}</h1>
         </div>
       </Modal>
       <Footer />
