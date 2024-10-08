@@ -26,6 +26,7 @@ const Contact = () => {
         alert("Failed to fetch data!");
       }
     };
+
     fetchAllData();
   }, []);
 
@@ -33,6 +34,58 @@ const Contact = () => {
     const name = e.target.name;
     const value = e.target.value;
     setFormVal((prev) => ({ ...prev, [name]: value }));
+  }
+
+  const sendSMS = async (formData) => {
+    try {
+      const response = await fetch("/api/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        console.log("Message sent successfully!");
+      } else {
+        console.log("Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      console.log("An error occurred. Try again later.");
+    }
+  };
+
+  async function sendMessage() {
+    if (formVal.userEmail && formVal.userMassage && formVal.userName) {
+      const response = await fetch("/api/saveData", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formVal),
+      });
+
+      if (response.ok) {
+        setModalMessage("Thank you for your review!");
+        await sendSMS({
+          name: formVal.userName,
+          email: formVal.userEmail,
+          message: formVal.userMassage,
+        });
+        setFormVal({
+          userName: "",
+          userEmail: "",
+          userMassage: "",
+        });
+      } else {
+        setModalMessage("Something went wrong!");
+      }
+    } else {
+      setModalMessage("Please fill required fields!");
+    }
+
+    setIsOpen(true);
   }
 
   return (
@@ -182,47 +235,15 @@ const Contact = () => {
               </div>
 
               <div className="my-4">
-                <button
-                  onClick={async () => {
-                    if (
-                      formVal.userEmail &&
-                      formVal.userMassage &&
-                      formVal.userName
-                    ) {
-                      const response = await fetch("/api/saveData", {
-                        method: "POST",
-                        headers: {
-                          "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify(formVal),
-                      });
-
-                      if (response.ok) {
-                        setModalMessage("Thank you for your review!");
-                        setFormVal({
-                          userName: "",
-                          userEmail: "",
-                          userMassage: "",
-                        });
-                      } else {
-                        setModalMessage("Something went wrong!");
-                      }
-                    } else {
-                      setModalMessage("Please fill required fields!");
-                    }
-
-                    setIsOpen(true);
-                  }}
-                  className="button"
-                >
-                  {" "}
-                  SEND MESSAGE{" "}
+                <button onClick={sendMessage} className="button">
+                  SEND MESSAGE
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       {/* success modal */}
       <Modal
         className="card_stylings backdrop-blur-3xl drop-shadow-2xl"
