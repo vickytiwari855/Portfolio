@@ -1,52 +1,49 @@
 export const NAME = "Vikas Tiwari";
 
-export const DESIGNATION = `MERN Stack Developer | Open Source Contributor | Tech Blogger`;
+export const DESIGNATION = `MERN Stack Developer`;
 
 export const DETAILS = {
   Residence: "India",
   City: "Indore",
-  Age: "25",
+  Age: "26",
 };
 
 export const SKILLS = [
   {
     title: "MERN Stack Developer",
-    level: "75%",
+    level: "70%",
   },
   {
-    title: "React Developer",
-    level: "91%",
+    title: "Frontend Developer",
+    level: "95%",
   },
 
   {
     title: "Backend Developer",
     level: "30%",
   },
-  {
-    title: "Technical Blogger",
-    level: "35%",
-  },
 ];
 
 export const TECH_STACK = [
   "React",
-  "Native",
-  "Redux",
-  "RTK Query",
-  "Node",
-  "Express",
   "Next",
-  "REST API",
-  "TypeScript",
-  "JavaScript",
+  "Express",
+  "Native",
   "Syncfusion",
-  "Material UI",
-  "TailwindCSS",
-  "Bootstrap",
+  "Redux",
   "SCSS",
+  "Jest",
+  "JavaScript",
+  "Material UI",
+  "Node",
   "CSS",
+  "TypeScript",
   "GitHub",
   "Jira",
+  "RTK Query",
+  "TailwindCSS",
+  "Bootstrap",
+  "REST API",
 ];
 
 export const CONTACTS = {
