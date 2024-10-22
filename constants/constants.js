@@ -1,6 +1,6 @@
 export const NAME = "Vikas Tiwari";
 
-export const DESIGNATION = `MERN Stack Developer`;
+export const DESIGNATION = `Frontend Developer`;
 
 export const DETAILS = {
   Residence: "India",
