@@ -46,9 +46,9 @@ const Contact = () => {
 
       const result = await response.json();
       if (result.success) {
-        console.log("Message sent successfully!");
+        setModalMessage("Review sent successfully!");
       } else {
-        console.log("Failed to send message.");
+        setModalMessage("Failed to send review.");
       }
     } catch (error) {
       console.error("Error:", error);
@@ -58,6 +58,12 @@ const Contact = () => {
 
   async function sendMessage() {
     if (formVal.userEmail && formVal.userMassage && formVal.userName) {
+      await sendSMS({
+        name: formVal.userName,
+        email: formVal.userEmail,
+        message: formVal.userMassage,
+      });
+
       const response = await fetch("/api/saveData", {
         method: "POST",
         headers: {
@@ -67,19 +73,19 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        setModalMessage("Thank you for your review!");
-        await sendSMS({
-          name: formVal.userName,
-          email: formVal.userEmail,
-          message: formVal.userMassage,
-        });
+        setTimeout(() => {
+          setModalMessage("Thank you for your review!");
+        }, 1000);
+
         setFormVal({
           userName: "",
           userEmail: "",
           userMassage: "",
         });
       } else {
-        setModalMessage("Something went wrong!");
+        setTimeout(() => {
+          setModalMessage("Something went wrong!");
+        }, 1000);
       }
     } else {
       setModalMessage("Please fill required fields!");
