@@ -2,10 +2,28 @@ export const NAME = "Vikas Tiwari";
 
 export const DESIGNATION = `Frontend Developer`;
 
+function calculateAge(dob) {
+  const birthDate = new Date(dob);
+  const today = new Date();
+
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDifference = today.getMonth() - birthDate.getMonth();
+
+  // Adjust age if birthday hasn't occurred yet this year
+  if (
+    monthDifference < 0 ||
+    (monthDifference === 0 && today.getDate() < birthDate.getDate())
+  ) {
+    age--;
+  }
+
+  return age;
+}
+
 export const DETAILS = {
-  Residence: "India",
-  City: "Indore",
-  Age: "26",
+  Residence: "INDIA",
+  City: "INDORE, MP",
+  Age: calculateAge("1999-08-25"),
 };
 
 export const SKILLS = [

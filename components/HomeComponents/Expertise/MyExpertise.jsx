@@ -23,6 +23,7 @@ const MyExpertise = () => {
             ))
           : data?.map((data, key) => <ExpertiseCard key={key} data={data} />)}
       </div>
+      <br />
     </>
   );
 };

@@ -29,32 +29,41 @@ const background = [
   {
     expCards: [
       {
+        id: 0,
+        title: "Zevo360 Technologies PVT. LTD",
+        role: "Sr. Analyst - Application Development",
+        url: "https://www.zevo360.com/",
+        desc: "Leading frontend architecture for Zevo Parenting App using React, Next.js 14, and TypeScript. Built a DRM-protected video streaming platform serving 5,000+ users and developed a multi-tenant admin portal managing 15,000+ accounts. Improved performance by 60% through code splitting, lazy loading, and optimized API integrations handling 100K+ daily requests.",
+        year: "Jun 2025 - Present",
+        location: "Indore, India"
+      },
+      {
         id: 1,
-        title: "Ignatiuz",
+        title: "Ignatiuz Software Pvt. Ltd.",
         role: "Analyst - Application Development",
         url: "https://www.ignatiuz.com/",
-        desc: "I am working as a Senior front end developer",
-        year: "2023 - Present",
-        location: "Indore, India",
+        desc: "Developed enterprise-grade government and SaaS applications using React, Node.js, and MongoDB. Built AI-powered Prompt-to-Form Generator and integrated OpenAI API for intelligent chatbot features with multimodal responses. Delivered secure admin dashboards with role-based access control and real-time content workflows.",
+        year: "Sep 2023 - Apr 2025",
+        location: "Indore, India"
       },
       {
         id: 2,
-        title: "Tata Consultancy Services",
-        role: "Senior Frontend Developer",
-        url: "https://www.tcs.com/careers",
-        desc: "I work there as a React TypeScript developer, there I learned how to do CRUD'S operations in react TypeScript, also I using  Material UI",
-        year: "2022 - 2023",
-        location: "Chennai, India",
+        title: "Tata Consultancy Services (TCS)",
+        role: "Senior Application Developer",
+        url: "https://www.tcs.com/",
+        desc: "Built scalable frontend applications using React, TypeScript, and Material-UI. Developed dynamic dashboards, CRUD modules, secure authentication systems, and optimized REST API integrations. Focused on performance, reusable component architecture, and enterprise-grade UI systems.",
+        year: "Feb 2022 - Aug 2023",
+        location: "Chennai, India"
       },
       {
         id: 3,
-        title: "Codiotic Technologies PVT LTD",
+        title: "Codiotic Technologies Pvt. Ltd.",
         role: "Frontend Developer",
         url: "https://in.linkedin.com/company/codiotic-technologies-pvt-ltd",
-        desc: "As a frontend developer, I use React, Next & JavaScript to build user interfaces for web applications.",
-        year: "2019 - 2022",
-        location: "Indore, India",
-      },
+        desc: "Designed and developed responsive web applications using React, Next.js, and JavaScript. Built user-friendly interfaces, admin panels, and integrated backend APIs while ensuring cross-browser compatibility and mobile responsiveness.",
+        year: "Apr 2021 - Jan 2022",
+        location: "Indore, India"
+      }
     ],
   },
 ];

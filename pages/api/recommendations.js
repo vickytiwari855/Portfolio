@@ -1,38 +1,41 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+
 const recommendationCard = [
   {
     id: 0,
     name: "Kumar Raju",
     image: "images/shahmir.jfif",
-    designation: "React JS | NEXT JS | Node | GraphQL",
-    view: "Hey everyone! I wanted to take a moment to recommend Vikas Tiwari for any React.js opportunities. I had the pleasure of working with him on multiple projects where he showcased a strong understanding of React.js and Next.js concepts and delivered high-quality code. He consistently demonstrated a willingness to learn and grow, and his enthusiasm for tackling new challenges was contagious. Vikas Tiwari is a reliable and dedicated team member who would be a great asset to any React.js team. Highly recommended! 👍! 🌟",
-    linkednURL: "https://www.linkedin.com/in/shahmir-minhas/",
+    designation: "Senior Full Stack Engineer | React | Next.js | GraphQL",
+    view: "I had the opportunity to collaborate with Vikas Tiwari on multiple frontend initiatives, and his expertise in React.js, Next.js, and TypeScript consistently stood out. He architected scalable component structures, optimized performance, and delivered production-ready features with clean, maintainable code. His strong problem-solving mindset and ability to handle complex enterprise requirements make him a valuable asset to any high-performing engineering team. Highly recommended.",
+    linkednURL: "https://www.linkedin.com/in/shahmir-minhas/"
   },
   {
     id: 1,
     name: "Ashutosh Patidar",
     image: "images/sikandar.jpeg",
-    designation: "Node JS | React JS | PHP | Python Developer",
-    view: "I had the privilege of working alongside Vikas Tiwari on multiple university projects, and I must say, his talent and work ethic truly stood out. Recently, we were both part of the dynamic team at JMM Technologies, where Vikas Tiwari professionalism and attention to detail shone brightly. I wholeheartedly endorse Vikas Tiwari for any opportunity that calls for a highly skilled and dedicated individual.",
-    linkednURL: "https://www.linkedin.com/in/sikandar-hayat-381407179/",
+    designation: "Backend Engineer | Node.js | Python | Cloud",
+    view: "Working with Vikas Tiwari has always been a great experience. His frontend architecture decisions, API integration skills, and focus on performance optimization significantly improved overall product quality. He maintains high coding standards, actively participates in Agile processes, and consistently delivers on time. His leadership qualities and mentoring approach make him stand out as a Senior Frontend Developer.",
+    linkednURL: "https://www.linkedin.com/in/sikandar-hayat-381407179/"
   },
   {
     id: 2,
     name: "Dhanraj Jangid",
     image: "images/nasir.jpg",
-    designation: "MERN | JavaScript | Tailwind | Sass | Bootstrap",
-    view: "I wholeheartedly recommend Vikas Tiwari as a talented React frontend developer with an incredible flair for UI/UX design. His proficiency in Node.js further enhances his capabilities, allowing him to build robust and scalable applications. Vikas Tiwari attention to detail, problem-solving skills, and dedication to delivering exceptional results make him a valuable addition to any development team.",
-    linkednURL: "https://www.linkedin.com/in/nasirkhan22/",
+    designation: "MERN Stack Developer | UI Engineering",
+    view: "Vikas Tiwari is an exceptional frontend engineer with deep expertise in React, Next.js, and modern UI systems. His attention to detail in UI/UX, reusable component development, and scalable architecture ensures robust and user-friendly applications. His ability to integrate advanced APIs, including AI-driven features, truly differentiates him from others. He brings both technical excellence and reliability to every project.",
+    linkednURL: "https://www.linkedin.com/in/nasirkhan22/"
   },
   {
     id: 3,
     name: "Aman Tiwari",
     image: "images/muhammad.jpeg",
-    designation: "MERN Stack Developer at Productbox",
-    view: "I highly recommend Vikas Tiwari for web frontend development positions. Their expertise in ReactJS and Next.js, combined with their professionalism and dedication, make them an invaluable asset to any team.",
-    linkednURL: "https://www.linkedin.com/in/muhammadullahafridi/",
-  },
-];
+    designation: "Full Stack Developer | SaaS Products",
+    view: "I highly recommend Vikas Tiwari for Senior Frontend or Lead Frontend roles. His expertise in building enterprise-grade applications using React and Next.js, along with his experience in performance tuning, multi-tenant systems, and secure integrations, makes him a strong technical leader. He consistently delivers scalable, high-quality solutions and contributes positively to team growth.",
+    linkednURL: "https://www.linkedin.com/in/muhammadullahafridi/"
+  }
+]
+
+
 export default function handler(req, res) {
   res.status(200).json(recommendationCard);
 }
